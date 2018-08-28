@@ -1,5 +1,6 @@
-me = input("Say something ")
+me = input("Say something ").lower()
 
-while me != "Stop copying me!":
+while me != "stop copying me":
     print(me)
     me = input()
+print('you win')
