@@ -186,7 +186,18 @@ list2 = ['y', 'e', 'l', 'l', 'o']
 list2.remove('y') #this will remove 'y'
 #Note that if 'y' is not in the list, I will get a ValueError
 
+#More List Methods:
+#Index, Count, Sort, Reverse, and Something:
 
+#index
+#index returns the index of an item within a list.
+#index referring to where it is.
+#Note it starts at 0...
+numbers = [1,2,3,4,5]
+
+numbers.index(3) #this will return '2' since 3 is at the 2 index position (remember 0)
+
+#can add a staart and end point...that is where i left off
 
 
 
