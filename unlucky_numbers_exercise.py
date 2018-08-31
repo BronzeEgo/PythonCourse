@@ -7,7 +7,7 @@
 for i in range(1,21):
     if i == 4 or i == 13:
         print(f"{i} is unlucky")
-    elif i % 2 == 1:
+    elif i % 2 == 1: #modulus
         print(f'{i} is odd')
     else:
         print(f'{i} is even')

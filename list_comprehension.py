@@ -58,8 +58,41 @@ numbers = [1,2,3,4,5]
 string_list = [str(num) for num in numbers]
 print(string_list) #['1', '2', '3', '4', '5']
 
+#Adding conditional logic to list comprehension
+#such as if and else
 
+#This example will create two new lists from the first
+#one being even numbers, the other odd
+nums = [1,2,3,4,5,6]
 
+evens = [num for num in nums if num % 2 == 0] #Use a modulus to find even #[2, 4, 6]
+odds = [num for num in nums if num % 2 != 0] #use modulus to find odds #[1, 3, 5]
+print(evens)
+print(odds)
+
+#using else conditional logic example:
+else_example = [num*2 if num % 2 == 0 else num/2 for num in nums]
+print(else_example) #[0.5, 4, 1.5, 8, 2.5, 12]
+
+#This is a weird one, but it will remove vowels (example of not in):
+with_vowels = "This is so much fun!"
+
+without_vowels = ''.join(char for char in with_vowels if char not in 'aeiou')
+print(without_vowels) #'Ths s s mch fn!'
+
+#nested list comprehension:
+nested_list = [[1,2,3], [4,5,6], [7,8,9]]
+
+[[print(val) for val in i] for i in nested_list] #prints 1 - 9 taken from nested_list on separate lines
+
+#another example of nested list comprehension:
+board = [[num for num in range (1,4)] for val in range(1,4)]
+
+print(board) #[[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+
+new_board = [['X' if num % 2 != 0 else 'O' for num in range(1,4)] for val in range(1,4)]
+
+print(new_board) #[['X', 'O', 'X'], ['X', 'O', 'X'], ['X', 'O', 'X']] #The first part is repeated 3 times
 
 
 

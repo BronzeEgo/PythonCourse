@@ -326,6 +326,35 @@ names = ['James', 'Mike']
 names[0], names [1] = names[1], names[0]
 print(names) #['Mike', 'James']
 
+#This is in section 13, 'List Comprehension', but it feels better here I think
+#Nested Lists
+#aka multidimensional lists
+#I've seen these a bit previously
+nested_list = [[1,2,3], [4,5,6], [7,8,9]] #This only has 3 elements since each list is an element...async def 
+#When would I use nested lists?
+#'More frequently than I'd expect'
+#Why?
+#If I'm building a game, I will use them (complex data structure (matricies))
+#Game boards/mazes
+#Rows and columns for visualizations, tabulation, and grouping data (ding, ding, ding)
+#I'm thinking JSON inside a list such as 'mods' inside a list such as 'VapeWild'...
+
+#Accessing nested lists:
+#Note, I will need to understand how to access info by specific string AND something...I think I could make it happen with what I have so far...
+nested_list = [[1,2,3], [4,5,6], [7,8,9]]
+nested_list[0][1] #output 2 #first list, second entry
+nested_list[1][-1] #output 6 #Second list, last entry
+
+#printing values or iterating through nested lists:
+nested_list = [[1,2,3], [4,5,6], [7,8,9]]
+for i in nested_list:
+    for val in i:
+        print(val) #this will print all the values in the lists on separate lines
+
+
+
+
+
 
 
 
