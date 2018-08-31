@@ -11,7 +11,7 @@ while player_wins < winning_score and computer_wins < winning_score:
     print("Scissors...")
     print("Best of 5! May the best bot win!")
     print("Type 'q' or 'quit' to quit...")
-    player1 = input("Make your move! (Type 'rock', 'paper', or 'scissors')")
+    player1 = input("Make your move! (Type 'rock', 'paper', or 'scissors'): ").lower()
     if player1 == "quit" or player1 == "q":
         break
     random_num = randint(0, 2)
