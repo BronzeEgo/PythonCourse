@@ -193,15 +193,138 @@ list2.remove('y') #this will remove 'y'
 #index returns the index of an item within a list.
 #index referring to where it is.
 #Note it starts at 0...
+#if you try to index something that does not exist, it will throw an error, use count in that case
 numbers = [1,2,3,4,5]
 
 numbers.index(3) #this will return '2' since 3 is at the 2 index position (remember 0)
 
-#can add a staart and end point...that is where i left off
+#You can specify a start and end to the index function (method?)
+numbers = [5,5,6,7,5,8,8,9,10]
+
+numbers.index(5) #This will output 0 since '0' is the index of the number '5' (remember zero)
+numbers.index(5, 1) #This will output 1 since '1' is the '1st' index of the number '5' after skipping hte first (0)(remember zero and that this skips zero index since we requested 1)
+numbers.index(5, 2) #This will output 4 since '4' is the '2th' index of the number '5' (remember zero and that this skips zero and one indexes before starting its search)
+numbers.index(8, 6, 8) #This is using a start AND end index. This will output 6. I am starting at 6 index and ending at 8 index. It skips the 6 at the fifth index (remember zero)
+
+#count
+#count accepts a single input and outputs the number of times the input occurs in the list
+#this may be very useful to count the number of times the same product is displayed FROM the same retailer (there is a problem likely if it is more than 1)
+#this could also be used to make sure everything is still included from the previous run
+#example: Smok Mag was in the last run and its name is automatically added to a list
+#next run, I compare the old list with the current list
+#Smok Mag no longer shows up
+#I'd want to look into that...
+numbers = [1,2,3,4,3,2,1,4,10,2]
+
+numbers.count(2) #outputs '3' since 2 is included in the list 3 times
+numbers.count(21) #outputs '0' since 21 is not found in list
+numbers.count(3) #outputs 2
+
+#reverse
+#reverse sreverses the order of the list (in place)
+#in place means it is taking the list given and doing the changes there. no new list is created. BE CAREFUL
+first_list = [1,2,3,4]
+
+first_list.reverse()
+print(first_list) #output [4,3,2,1]
+
+#sort
+#very breif decription here
+#will get into much more detail in another section once custom functions and lambas are understood
+#sort the items of the list (in-place)
+#For now, no input is provides, but, as said earlier, I will once the above stuff is understood
+another_list = [6,4,1,2,5]
+
+another_list.sort()
+print(another_list) #output [1,2,4,5,6]
+
+#join
+#not a list method
+#different from everything else covered so far
+#it is actually a string method (rather than a list method)
+#it is very common in lists though to convert lists to strings
+words = ['Coding', 'is', 'Fun!']
+#whatever string join is called on (in the case below ' ') will be put between the strings in the list. Seems like a space would be most useful, but likely not always...
+' '.join(words) #output will be a new string from the list and put the 'string' was called on (in this case a space) in the middle, 'Coding is Fun!'
+
+#here is one where something besides a space would be useful
+name = ['Mr', 'Steele']
+'. '.join(name) #output string is 'Mr. Steele'
+#note that join does not change the list. It will still be in tact once the join is run. It just returns whatever you ask for.
+#if I want to store the output, I need to do this:
+concatenated_name = '. '.join(name) #makes concatenated_name = 'Mr. Steele'
+
+#slicing
+#this can be used on lists or strings
+#I will be focused on lists here
+#note that this just shows the 'slice', it doesn't change the original list
+#the syntax for slicing is different from what I have been doing:
+#some_list[start:end:step]
+#syntax similar to range...
+first_list = [1,2,3,4]
+
+first_list[1:] #[2,3,4]
+first_list[3:] #[4]
+first_list[1] #Note the lack of a colon. Here, it would output '1' since it is the item at the first index location. '1' is not in []
+
+#if I wanted to create a new list from the new slice, I would do:
+first_list = [1,2,3,4]
+
+new_list = first_list[1:] #[2,3,4] in now stored in 'new_list'
+
+#I can also use negative numbers...
+first_list = [1,2,3,4]
+
+first_list[-1:] #[4]
+first_list[-3:] #[2,3,4]
+
+#you can also easily copy a list using slicing (True, but not 'is'):
+first_list = [1,2,3,4]
+
+new_list = first_list[:] #[1,2,3,4]
+new_list == first_list #True
+new_list is first_list #False
+
+#adding in an 'end' to a slice:
+list1 = [1,2,3,4]
+
+list1[:2] #output [1,2]
+list1[:4] #output [1,2, 3,4]
+list1[1:3] #output [2,3]
+#if you pass in a negative number at the end of the slice, it will exclude that many numbers from the end (counting backwards)
+list1[:-1] #[1,2,3]
+list1[1:-1] #[2,3]
+
+#now add the step
+list1 = [1,2,3,4,5,6]
+
+list1[1::2] #[2,4,6]
+list1[::2] #[1,3]
+
+#it gets a bit more complicated with negative numbers
+list1[1::-1] #[2,1] #I am moving to the '1th' position and stepping back 1 at a time, giving [2,1]
+list1[:1:-1] #[6,5,4,3] #In this case, I start at '2' and step back 1 at a time from the end. the '2' is excluded becasue the 'end' portion of the statement is exclusive.
+list1[2::-1] #[3,2,1] #Now I am moving to the third (0,1,2) position and stepping back one at a time.
+
+#Tricks with slices
+#reversing lists/strings
+string1 = 'This is fun!'
+
+string1[::-1] #!nuf si siht #Say output as reverse in this case.
+
+#modify specific portions of a list
+numbers = [1,2,3,4,5]
+numbers[1:3] = ['a', 'b', 'c']
+
+print(numbers) #[1, 'a', 'b', 'c', 4, 5]
 
 
+#swapping values
+#used if you want to move a value froim one location in a list to another
+names = ['James', 'Mike']
 
-
+names[0], names [1] = names[1], names[0]
+print(names) #['Mike', 'James']
 
 
 
