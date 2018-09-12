@@ -1,6 +1,6 @@
-#Section 8, Part 72
+# Section 8, Part 72
 
-#ask for age
+# ask for age
 print('How old are you?')
 age = input()
 
@@ -15,7 +15,6 @@ if age:
 else:
     print("Enter an age!")
 
-#18-21 wristband
-#21+ drink, normal entry
-#elif, too young, sorry
-
+# 18-21 wristband
+# 21+ drink, normal entry
+# elif, too young, sorry

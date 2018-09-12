@@ -2,3 +2,5 @@ Python is an interpreted language, and in order to run Python code and get Pytho
 
 From within VS Code, select a Python 3 interpreter by opening the Command Palette (Ctrl+Shift+P), start typing the Python: Select Interpreter command 
 to search, then select the command. You can also use the Select Python Environment option on the Status Bar if available (it may already show a selected interpreter, too):
+
+https://code.visualstudio.com/docs/python/environments#_conda-environments

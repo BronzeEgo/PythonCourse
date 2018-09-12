@@ -187,7 +187,7 @@ sorted(users_sort, key=lambda user:len(user['tweets']), reverse=True) #This will
 
 #max
 #min is same, but opposite
-#return the largest item in an iterable or the largest of two or more arguements.
+#return the largest item in an iterable or the largest of two or more arguements.  
 #you can pass in, I believe, any iterable into 'max'
 
 #max(strings, dicts with same key)

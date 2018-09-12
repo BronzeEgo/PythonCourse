@@ -110,7 +110,7 @@ colors.append('Teal')
 # to THE END of a list.
 #Below will add the presented values to the list colors
 #AFTER 'Teal'
-#Note that it will MERGE the two lists
+#Note that it will MERGE the two lists 
 colors.extend(['Orange', 'Purple', 'Cyan'])
 
 #insert

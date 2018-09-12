@@ -1,6 +1,6 @@
-#This shows how to use for loops
-#the user inputs a number and the console spits out
-#a string the amount of times the user specifies.
+# This shows how to use for loops
+# the user inputs a number and the console spits out
+# a string the amount of times the user specifies.
 
 times = input('How many times do I need to tell you? ')
 times = int(times)
