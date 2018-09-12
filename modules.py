@@ -61,3 +61,14 @@ print(r(1, 100))
 # to get external packages, I need to use pip in regular Python, but since I'm using Anaconda, I need the cheatsheet:
 # https://conda.io/docs/_downloads/conda-cheatsheet.pdf
 # It's important to note that I should use different environments as I am testing things out...
+
+
+# Section 22, Lecture 223 - The Mysterious __name__ variable
+# __name__ variable means don't touch
+# When run, every Python file has a __name__ variable (whether I declare it or not)
+# If the file is the main file being run, its value is '__main__'
+# kinda weird to describe here. If I want to learn more, see video 223
+# To ignore code on import (VI):
+# if __name__ == '__main__':
+# this code will not run
+# if the file is the main file

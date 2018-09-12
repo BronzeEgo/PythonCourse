@@ -11,3 +11,8 @@
 
 # autopep8 --in-place script.py
 # is the command line code he used.
+
+# see section 22, lecture 222 for autopep8 details
+# I don't need to know the format, it will do it for me.
+# conda is a bit different than described, but with vscode, installation and use is super easy.
+# just make use 'automatically format on save' is checked in settings
