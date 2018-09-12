@@ -146,7 +146,7 @@ all([name [0] == 'C' for name in people]) #False
 
 #generator functions and using sys.getsizeof
 #I'm not really sure what this is (lecture 191) but it would seem to be useful if I am running into memory issues or need to hyper optimize my code
-#The more I play with it, the more I believe the above statment to be the case.
+#The more I play with it, the more I DAbelieve the above statment to be the case.
 #Look at the memory usage below...HUGE difference, but would not bog down any of my machines...do it 1000 times, and I might have an issue though
 #The list comprehension will be useful if I need the list thereafter, whereas the generator expression would be best in all other circumstances
 import sys
