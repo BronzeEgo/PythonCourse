@@ -156,3 +156,32 @@ gen_exp = sys.getsizeof(x * 10 for x in range(1000))
 print('To do the same thing, it takes...')
 print(f"List comprehension: {list_comp} bytes") #List comprehension: 9024 bytes
 print(f"Generator Expression: {gen_exp} bytes") #Generator Expression: 88 bytes
+
+#sorted
+#returns a new soted list from the items in iterable
+more_numbers = [6,1,8,2]
+sorted(more_numbers) #[1, 2, 6, 8] sorts the list, but does not save it (unless you put it in a variable)
+print(more_numbers) #[6,1,8,2] #printing the original list reveals that it is still unsorted
+#note that .sort() will do the same thing, but will sort the original list
+#if you need the list in reverse order:
+sorted(more_numbers, reverse=True) #[8, 6, 2, 1], remember that this does not change the variable so, if you want a saved version, you must save it to new variable
+#sorted also works on a tuple (it accepts them, but retruns a list)
+#'Here is where it gets more powerful'
+users_sort = [
+	{"username": "samuel", "tweets": ["I love cake", "I love pie", "hello world!"]},
+	{"username": "katie", "tweets": ["I love my cat"]},
+	{"username": "jeff", "tweets": []},
+	{"username": "bob123", "tweets": []},
+	{"username": "doggo_luvr", "tweets": ["dogs are the best", "I'm hungry"]},
+	{"username": "guitar_gal", "tweets": []}
+]
+#now, say I want to sort them by user name...
+#must do this:
+sorted(users_sort, key=len) #will count the number of keys and sort by the longest dictionary in ascending order
+sorted(users_sort, key=lambda user:user['username']) #This will sort the dictionaries in alphabetical order by usernames
+sorted(users_sort, key=lambda user:len(user['tweets']) #This will sort the users by number(len) of tweets in ascending order
+sorted(users_sort, key=lambda user:len(user['tweets']), reverse=True) #This will sort the users by number(len) of tweets in decending order
+#Note, this is showing the syntax as wrong in Code, but when run in prompt, all is well...
+
+
+
