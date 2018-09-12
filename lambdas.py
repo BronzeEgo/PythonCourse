@@ -183,5 +183,124 @@ sorted(users_sort, key=lambda user:len(user['tweets']) #This will sort the users
 sorted(users_sort, key=lambda user:len(user['tweets']), reverse=True) #This will sort the users by number(len) of tweets in decending order
 #Note, this is showing the syntax as wrong in Code, but when run in prompt, all is well...
 
+#min and max
+
+#max
+#min is same, but opposite
+#return the largest item in an iterable or the largest of two or more arguements.
+#you can pass in, I believe, any iterable into 'max'
+
+#max(strings, dicts with same key)
+max([3,4,1,2]) #4
+max([1,2,3,4]) #4
+max('awesome') #'w'
+max({1: 'a', 3:'c', 2:'b'}) #3
+nums1 = [20,15,16,80,100]
+max(nums1) #100
+#min is done in the same way
+min(nums1) #15
+min('awesome') #'a'
+
+names = ['bob', 'marl', 'wendy', 'doug']
+min(names) #'bob'
+max(names) #'wendy'
+#to check by len:
+min(len(name) for name in names) #3
+#if I want 'bob' instead of 3, I need a lambda:
+min(names, key=lambda n:len(n)) #'bob'
+
+#this will return the min and max in a tuple:
+def extremes(nums):
+    return(min(nums), max(nums))
+
+#reversed
+#return a reverse iterator
+nuns = [1,2,3,4]
+reversed(nuns) #<list_reverseiterator object at 'memory location'
+list(reversed(nuns)) #[4,3,2,1]
+#If you need a list, just use .reverse()
+#reversed allows you to work with the output
+#example:
+for char in reversed('hello world'):
+    print(char) #this will give me the letters for 'hello world' in reverse order on their own lines
+#I can also use a slice to get reverse (as noted much earlier in course):
+'hello'[::-1] #'olleh'
+#reversed is useful if I am iterating over something in reverse 
+
+#using it on a range (see 196 around 3:15)
 
 
+#len 197
+#he does some review at the beginning, but I have notes
+#he also gets into OOP here a bit as well. I'm going to wait for that section to take notes
+
+#abs, sum, and round 198
+#I'm going to skip this for now...Not necessarily crutial to what I need. Revisit the video if need be...
+#abs()
+#return the absolute value of a number. The argument can be an integer or float
+#sum()
+#round()
+
+#zip
+#Makes an iterator that aggregates elements from each of the iterables
+#Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+#the iterator stops when the shortest input iterable is exhausted
+#'okay, what it is really'
+#'imagine you have 2 lists of numbers that are the same length'
+#'zip will take those lists and pair up the first numbers from each list, the second, and so on'
+#sounds like #not# collation in the printing world where you give the printer x copies to print and it outputs them as x copies of the first page, then x copies of the second page, and so on...
+#not the best example since those pages should come out in a proper order, wheras the number sets may correlate to one another is useful ways.
+#order matters
+nums2 = [1,2,3,4,50]
+nums3 = [6,7,8,9]
+z = zip(nums2, nums3) 
+list(z) #[(1, 6), (2, 7), (3, 8), (4, 9)]
+z = zip(nums3, nums2) 
+list(z) #[(6, 1), (7, 2), (8, 3), (9, 4)]
+#notice that since the two lists were asymmetrical, it knocked off the '50' both times.
+#also notice that order of variables matters (nums2, nums3) vs (nums3, nums2)
+#not limited to two lists
+#a better way to describe this, I think, would be to take a CSV file as an example
+#a common CSV file that I use has multiple columns, and then I can do things with those columns using VB for Apps
+#instead, imagine I had the same data set, but each column was broken into a different file
+#I could then 'zip' them together to make a useful data set that I could then manipulate.
+
+#video 203
+#I did not do any of these exercises. I may need to in the future, but since I will mostly be working with CSV and JSV file types, it should already be done
+#If I want to get into the more analytic end of the process, I will need to revisit this.
+#zip to unpack a list (take it back to its root form(s))
+#use the * operator
+five_by_two = [(0,1), (1,2), (2,3), (3,4), (4,5)]
+list(zip(*five_by_two)) #[(0, 1, 2, 3, 4), (1, 2, 3, 4, 5)]
+
+# returns dict with {student:highest score} USING DICT COMP
+# {'dan': 98, 'ang': 91, 'kate': 78}
+final_grades = {t[0]:max(t[1], t[2]) for t in zip(students, midterms, finals)}
+
+
+# returns dict with {student:highest score} (same thing as above) USING MAP+LAMBDA
+# {'dan': 98, 'ang': 91, 'kate': 78}
+final_grades = dict(
+	zip(
+		students,
+		map(
+			lambda pair: max(pair),
+			zip(midterms, finals)
+		)
+	)
+)
+
+# returns dict with student:average score
+# {'dan': 89.0, 'ang': 90.0, 'kate': 65.5}
+avg_grades = dict(
+	zip(
+		students,
+		map(
+			lambda pair: ((pair[0]+pair[1])/2),
+			zip(midterms, finals)
+		)
+	)
+)
+
+#This is the end of zip, but I likely will need to learn it unless I plan on doing some of the 'zips' with VB for Apps (which I will likely do for now)
+#I 'zip' a lot of strings together into a single column in Excel, so this is more important than I thought
