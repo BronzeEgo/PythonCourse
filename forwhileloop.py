@@ -18,22 +18,19 @@
 # range(7, 0, -1) will give integers from 7 to 1 (counting down)
 
 
-
-
 # this will print 1-7
-for number in range(1,8):
+for number in range(1, 8):
     print(number)
 
 
-
 for char in "hello":
-    print (char)
+    print(char)
 
 # add odd number sbetween 10 and 20
 x = 0
 for n in range(10, 21):
     if n % 2 != 0:
-        x+= n
+        x += n
 print(x)
 
 # print CLEAN UP YOUR ROOM based on how many times the user wants it printed
@@ -86,7 +83,7 @@ for time in range(times):
 #     elif x == 20:
 #         print(x + " is even")
 
-for num in range(1,21):
+for num in range(1, 21):
     if num == 4:
         print(f"{num} is unlucky")
     elif num == 13:
@@ -98,7 +95,7 @@ for num in range(1,21):
 
 # OR
 
-for num in range(1,21):
+for num in range(1, 21):
     if num == 4:
         state = "unlucky"
         # print(f"{num} is unlucky")
@@ -116,7 +113,7 @@ for num in range(1,21):
 
 # print emojis
 # for version
-for num in range(1,11):
+for num in range(1, 11):
     print("\U0001f600" * num)
 
 # while version
@@ -139,13 +136,13 @@ while user_response != "please":
 # while loops require more careful setup than for loops, since you have to specify the termination conditions manuallyself.
 # CAREFUL! If the condition does not become false at some point, your loop will continue forever (or until your computer melts)
 
-msg = input ("YOU DO NOT KNOW THE WAY!")
+msg = input("YOU DO NOT KNOW THE WAY!")
 while msg != "I am the Queen":
     print("You are not worthy!")
     msg = input("YOU DO NOT KNOW THE WAY!")
 print("PROTECT THE QUEEN!")
 
-for num in range(1,11):
+for num in range(1, 11):
     print(num)
 
 # this will go on forever

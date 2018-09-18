@@ -1,7 +1,7 @@
 import random
 import webbrowser
 
-rand_num = random.randint(0,2)
+rand_num = random.randint(0, 2)
 
 if rand_num == 0:
     webbrowser.open_new_tab('www.eliquidessentials.com/eliquid')

@@ -1,7 +1,7 @@
 import random
 
 
-num = random.randint(1,10)
+num = random.randint(1, 10)
 user = None
 
 while True:
@@ -14,7 +14,7 @@ while True:
         print("Correct! Well done.")
         play_again = input("Do you want to play again? (y/n) ")
         if play_again == "y":
-            num = random.randint(1,10)
+            num = random.randint(1, 10)
             user = None
         else:
             print("Thanks for playing!")

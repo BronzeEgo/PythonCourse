@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "C:\\Users\\krstp\\Anaconda3\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.pep8Enabled": false,
     "python.linting.enabled": true
+=======
+    "python.pythonPath": "C:\\Users\\krstp\\Anaconda3\\envs\\scrapy\\python.exe"
+>>>>>>> 6db193445f451cb781095d2cf2f933b69292f543
 }

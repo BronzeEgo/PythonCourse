@@ -1,0 +1,17 @@
+1) Open a new terminal
+2) & cmd /k "activate testpack & powershell"
+    NOTE: 'testpack' is the env at the time of writing this
+        that will change depending on the env you want to use
+    ANOTHER NOTE: The first time I did this (vscode did it for me), 
+        the name of the terminal changed to 'Python' (with capital P)
+        I'm guessing this has to do with the '& powershell' above
+        I haven't noticed a difference yet in output, but I'm sure there 
+        is one!
+
+        If I do '& Python' (capital or lowercase 'p')
+        the terminal name changes to python 'lowercase p'
+3)That's it I think. Just make sure you are in correct dir for what you want to run...
+
+
+Another (easier to remember) way of doing this is Ctrl+Shift+P and Python: Create terminal
+This automatically does the stuff above and the term is called 'Python' (with capital 'p')
