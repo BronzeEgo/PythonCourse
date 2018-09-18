@@ -74,8 +74,8 @@ while i < len(numbers):
 #another, more complicated, while example.
 #This also shows how to pull the index number AND the 
 #index value in the same statement
-#[] will pull the value, while {} will pull the number
-colors = ['red', 'blue', 'green']
+#[]  will pull the value, while {} will pull the number
+colors = ['red', 'blue', 'green']  
 i = 0
 
 while i < len(colors):
